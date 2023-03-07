@@ -3,8 +3,8 @@ from django.db import models
 from django.utils import timezone
 
 class Genre(models.Model):
-    """This is the Genre table"""
-    name = models.CharField(max_length=255)
+    """This is the Genre for movies table"""
+    name = str(models.CharField(max_length=255))
 
     def __str__(self):
         return self.name

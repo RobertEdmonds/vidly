@@ -1,7 +1,7 @@
 """Allows tables to be accessed in admin portal"""
+# pylint: disable = no-name-in-module
 from django.contrib import admin
 from .models import Genre, Movie
-# Register your models here.
 
 class GenreAdmin(admin.ModelAdmin):
     """Adjust the view of genre table"""
