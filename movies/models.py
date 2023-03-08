@@ -1,10 +1,11 @@
 """This is for setting up the tables for the database"""
+# pylint: disable = invalid-str-returned
 from django.db import models
 from django.utils import timezone
 
 class Genre(models.Model):
     """This is the Genre for movies table"""
-    name = str(models.CharField(max_length=255))
+    name = models.CharField(max_length=255)
 
     def __str__(self):
         return self.name
