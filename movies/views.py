@@ -12,4 +12,5 @@ def index(request):
 
 def detail(request, movie_id):
     """To add value to home page"""
-    return HttpResponse(movie_id)
+    movie = Movie.objects.get(pk=movie_id)
+    return render(request, "movies/detail.html", {"movie": movie})
