@@ -10,6 +10,6 @@ def index(request):
     movies = Movie.objects.all()
     return render(request, "movies/index.html", {"movies": movies})
 
-def home(request):
+def detail(request, movie_id):
     """To add value to home page"""
-    return HttpResponse("Hello")
+    return HttpResponse(movie_id)
