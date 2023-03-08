@@ -8,7 +8,7 @@ from .models import Movie
 def index(request):
     """This is to send movies to http"""
     movies = Movie.objects.all()
-    return render(request, "index.html", {"movies": movies})
+    return render(request, "movies/index.html", {"movies": movies})
 
 def home(request):
     """To add value to home page"""
